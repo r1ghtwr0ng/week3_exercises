@@ -17,7 +17,16 @@ int main()
     string input;
     std::cout << "Input automata transitions: ";
     std::cin >> input;
-    std::cout << "Read " << input << " ends with: " << ends_with_b.Read(input) << std::endl;
+
+    bool retval = ends_with_b.Read(input);
+    if (retval)
+    {
+        std::cout << "Automata transitions " << input << " are valid" << std::endl;
+    } else 
+    {
+        std::cout << "Automata transitions " << input << " are invalid" << std::endl;
+    }
+    
 
     return 0;
 }
