@@ -1,7 +1,7 @@
 #include "automaton.h"
 #include <iostream>
 
-Automaton::Automaton(map<char, int> A, vector<vector<int>> M, vector<int> S) : alphabet(A), transition_matrix(M), accepting_states(S) {}
+Automaton::Automaton(map<char, uint> A, vector<vector<uint>> M, vector<uint> S) : alphabet(A), transition_matrix(M), accepting_states(S) {}
 
 bool Automaton::Read(string word)
 {
@@ -18,7 +18,7 @@ bool Automaton::Read(string word)
         auto it = alphabet.find(c);
 
         //it->first gives the key, it->second gives the value
-        int j = it->second;
+        uint j = it->second;
         state = transition_matrix[state][j];
     }
 

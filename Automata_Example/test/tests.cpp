@@ -8,9 +8,9 @@ using std::map;
 
 TEST_CASE("Check that a simple automaton accepts", "[simple accept]")
 {
-    vector<vector<int>> M{{0,1}, {1, 1}};
-    vector<int> S_A{0};
-    map<char, int> A{{'a', 0}, {'b', 1}};
+    vector<vector<uint>> M{{0,1}, {1, 1}};
+    vector<uint> S_A{0};
+    map<char, uint> A{{'a', 0}, {'b', 1}};
     Automaton only_As(A, M, S_A);
 
     REQUIRE(only_As.Read("aaaaa"));

@@ -9,9 +9,9 @@ using std::string;
 
 int main()
 {
-    vector<vector<int>> M{{0, 1}, {0, 1}};
-    map<char, int> A{{'a', 0}, {'b', 1}}; 
-    vector<int> S{1};
+    vector<vector<uint>> M{{0, 1}, {0, 1}};
+    map<char, uint> A{{'a', 0}, {'b', 1}}; 
+    vector<uint> S{1};
     Automaton ends_with_b(A, M, S);
 
     string input;
