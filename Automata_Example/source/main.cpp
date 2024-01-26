@@ -13,8 +13,10 @@ int main()
     map<char, int> A{{'a', 0}, {'b', 1}}; 
     vector<int> S{1};
     Automaton ends_with_b(A, M, S);
-    std::cout << "Read abab = " << ends_with_b.Read("abab") << std::endl;
-    std::cout << "Read aaba = " << ends_with_b.Read("aaba") << std::endl;
+
+    std::cout << "Input automata transitions: ";
+    std::cin >> input;
+    std::cout << "Read " << input << " " << ends_with_b.Read(input) << std::endl;
 
     return 0;
 }
